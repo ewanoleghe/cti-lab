@@ -1,0 +1,231 @@
+/* ui/src/index.css — Cyber CTI Dashboard Theme */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------ */
+/* Root Theme Variables */
+/* ------------------------------------------------ */
+
+:root {
+  /* Core colors */
+  --bg: #0a0e17;
+  --bg-card: rgba(30, 41, 59, 0.65);
+
+  --text: #d1d5db;
+  --text-heading: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  --border: rgba(59, 130, 246, 0.25);
+
+  --accent: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --accent-rgb: 139, 92, 246;
+
+  --critical: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --success: #10b981;
+
+  --critical-rgb: 239, 68, 68;
+  --warning-rgb: 245, 158, 11;
+  --info-rgb: 59, 130, 246;
+  --success-rgb: 16, 185, 129;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(59, 130, 246, 0.18);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, sans-serif;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo,
+               Monaco, Consolas, monospace;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+
+  background: var(--bg);
+  color: var(--text);
+
+  color-scheme: dark;
+}
+
+/* ------------------------------------------------ */
+/* Light Mode */
+/* ------------------------------------------------ */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --bg-card: rgba(255,255,255,0.75);
+
+    --text: #1e293b;
+    --text-heading: #0f172a;
+    --text-muted: #64748b;
+
+    --accent: #7c3aed;
+    --accent-rgb: 124,58,237;
+
+    --glass-bg: rgba(255,255,255,0.6);
+  }
+}
+
+/* ------------------------------------------------ */
+/* Base Layer */
+/* ------------------------------------------------ */
+
+@layer base {
+
+  body {
+    @apply min-h-screen antialiased;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+  }
+
+  #root {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  h1, h2, h3 {
+    @apply font-bold tracking-tight;
+    color: var(--text-heading);
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-8;
+    background: linear-gradient(to right, var(--accent), #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl mb-6;
+  }
+
+  a {
+    color: var(--accent);
+    transition: color .2s ease;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  code, pre {
+    @apply rounded px-1.5 py-0.5 text-sm;
+    background: rgba(17,24,39,.6);
+    font-family: var(--font-mono);
+  }
+
+}
+
+/* ------------------------------------------------ */
+/* Components */
+/* ------------------------------------------------ */
+
+@layer components {
+
+  /* Glass Card */
+
+  .glass-card {
+    @apply rounded-2xl p-6 backdrop-blur-xl border;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: all .3s ease;
+  }
+
+  .glass-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(var(--accent-rgb), .4);
+    box-shadow:
+      0 25px 50px -12px rgba(0,0,0,.25),
+      0 8px 32px rgba(0,0,0,.37);
+  }
+
+  /* Badge base */
+
+  .category-badge {
+    @apply inline-flex items-center px-3 py-1
+           text-xs font-medium uppercase tracking-wide
+           rounded-full border;
+  }
+
+  /* Severity badges */
+
+  .badge-critical {
+    background: rgba(var(--critical-rgb), .20);
+    border-color: rgba(var(--critical-rgb), .35);
+    color: var(--critical);
+  }
+
+  .badge-warning {
+    background: rgba(var(--warning-rgb), .20);
+    border-color: rgba(var(--warning-rgb), .35);
+    color: var(--warning);
+  }
+
+  .badge-info {
+    background: rgba(var(--info-rgb), .20);
+    border-color: rgba(var(--info-rgb), .35);
+    color: var(--info);
+  }
+
+  .badge-success {
+    background: rgba(var(--success-rgb), .20);
+    border-color: rgba(var(--success-rgb), .35);
+    color: var(--success);
+  }
+
+}
+
+/* ------------------------------------------------ */
+/* Scrollbar */
+/* ------------------------------------------------ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent-rgb), .5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ------------------------------------------------ */
+/* Responsive */
+/* ------------------------------------------------ */
+
+@media (max-width: 1024px) {
+
+  :root {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  :root {
+    font-size: 14px;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+}

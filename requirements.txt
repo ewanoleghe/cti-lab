@@ -1,0 +1,29 @@
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.12.1
+beautifulsoup4>=4.14.3          # patch updates ok
+certifi>=2026.2.25              # update cert bundle
+charset-normalizer==3.4.5
+click==8.3.1
+click-plugins==1.1.1.2
+colorama==0.4.6
+fastapi==0.135.1                # already latest
+feedparser==6.0.12              # stable
+filelock==3.25.2
+h11==0.16.0
+idna==3.11
+pydantic==2.12.5                # stable, no rush to 2.13 betas
+pydantic_core==2.41.5
+python-dotenv>=1.2.2            # safe patch updates
+requests>=2.32.5                # recommended
+requests-file==3.0.1
+sgmllib3k==1.0.0
+shodan>=1.31.0                  # check for newer
+soupsieve==2.8.3
+starlette==0.52.1
+tldextract>=5.3.1
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+urllib3>=2.6.3                  # recommended
+uvicorn>=0.41.0                 # patch updates
+xlsxwriter==3.2.9

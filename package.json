@@ -1,0 +1,14 @@
+{
+  "name": "cti-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "backend:collector": "python -m app.collector",
+    "backend:api": "uvicorn app.api:app --host 0.0.0.0 --port 9000 --reload",
+    "frontend": "cd ui && npm run dev",
+    "dev:all": "concurrently --kill-others-on-fail \"npm run backend:collector\" \"npm run backend:api\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
