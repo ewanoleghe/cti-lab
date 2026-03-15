@@ -1,28 +1,21 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.env
-cti_lab.db
+# Virtual environments
 .venv/
 venv/
 ENV/
 
-# Node / Vite
+# Secrets
+.env
+*.env
+
+# Local database
+cti_lab.db
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
 node_modules/
 ui/node_modules/
 ui/dist/
-ui/.vite/
-
-# Logs / temp
-*.log
-.DS_Store
-Thumbs.db
-
-# Editor / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
