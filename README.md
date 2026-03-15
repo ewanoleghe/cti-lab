@@ -33,7 +33,7 @@ Real-time **Cyber Threat Intelligence (CTI)** dashboard for monitoring global th
 
 ## Architecture
 **Backend:**
-- Collector (`app/collector.py`), FastAPI API (`app/api.py`), SQLite database (`cti_lab.db`)
+- Collector, FastAPI API , SQLite database
 
 **Frontend:**
 - React + Vite in `ui/`, Tailwind CSS, responsive design
