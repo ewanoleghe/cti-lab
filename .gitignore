@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.env
+cti_lab.db
+.venv/
+venv/
+ENV/
+
+# Node / Vite
+node_modules/
+ui/node_modules/
+ui/dist/
+ui/.vite/
+
+# Logs / temp
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
