@@ -88,3 +88,23 @@ Portfolio: [https://ewanoleghe.github.io/](https://ewanoleghe.github.io/)
 
 Happy threat hunting! 🕵️‍♂️💻
 
+
+## Usage
+- Navigate to `http://localhost:5173` to view the dashboard
+- Global threat feeds and company-specific alerts update automatically
+- Monitor CTI, breaches, phishing, leaks, and web mentions in real-time
+
+## Security Tips
+- Never commit `.env` or files containing API keys
+- Add `.env` to `.gitignore`
+- Rotate API keys regularly
+- Backup SQLite database securely
+
+## License
+MIT License — see [LICENSE](./LICENSE)
+
+## Credits / Contact
+Created by **Ewan Oleghe**  
+Portfolio: [https://ewanoleghe.github.io/](https://ewanoleghe.github.io/)
+
+Happy threat hunting! 🕵️‍♂️💻
