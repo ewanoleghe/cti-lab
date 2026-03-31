@@ -378,7 +378,7 @@ function App() {
                       </div>
                     </div>
 
-                    <h2 className="text-xl font-semibold mb-3 line-clamp-2">
+                    <h2 className="text-xl text-gray-800 font-semibold mb-3 line-clamp-2">
                       {article.title || "Untitled"}
                     </h2>
 
